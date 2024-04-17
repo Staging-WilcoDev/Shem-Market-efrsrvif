@@ -1,16 +1,22 @@
 @if (!$isLoading()) {
-  @for (item of $items(); track item.slug) {
-    <cdt-item-list-item
-      data-e2e-id="item-list"
-      (navigateToItem)="navigateToItem($event)"
-      (unFavorite)="unFavorite($event)"
-      (favorite)="favorite($event)"
-      [item]="item"
-    >
-    </cdt-item-list-item>
-  } @empty {
-    <div>No items are here... yet.</div>
-  }
+  <div class="container p-4">
+    <div class="row">
+      @for (item of $items(); track item.slug) {
+        <div class="col-md-3 pb-4">
+          <cdt-item-list-item
+            data-e2e-id="item-list"
+            (navigateToItem)="navigateToItem($event)"
+            (unFavorite)="unFavorite($event)"
+            (favorite)="favorite($event)"
+            [item]="item"
+          >
+          </cdt-item-list-item>
+        </div>
+      } @empty {
+        <div>No items are here... yet.</div>
+      }
+    </div>
+  </div>
 
   <cdt-pager
     (setPage)="setPage($event)"
