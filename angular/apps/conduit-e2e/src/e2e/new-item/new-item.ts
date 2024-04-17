@@ -16,7 +16,7 @@ Given(
   },
 );
 
-When("I am on New Post page", () => {
+When("I am on New Item page", () => {
   cy.visit("/editor");
 });
 
@@ -24,14 +24,8 @@ When("I input the title of the item", () => {
   cy.get("[placeholder='Item Title']").clear().type(itemTitle);
 });
 
-When("I input the summary of the item", () => {
-  cy.get('[placeholder="What\'s this item about?"]')
-    .clear()
-    .type("How to do automation testing");
-});
-
-When("I input the body of the item", () => {
-  cy.get("[placeholder='Write your item (in markdown)']")
+When("I input the description of the item", () => {
+  cy.get("[placeholder='Write some description (in markdown)']")
     .clear()
     .type("Automation testing description");
 });

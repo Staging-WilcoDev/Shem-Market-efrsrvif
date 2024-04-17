@@ -16,9 +16,9 @@ Feature: Items List
   Scenario: View item's information
     Then I can see the title of an item
 
-  Scenario: View item's author
-    When I click on the first item's author name
-    Then I navigate to the author's profile page
+  Scenario: View item's seller
+    When I click on the first item's seller name
+    Then I navigate to the seller's profile page
 
   Scenario: Navigate to a new page
     When I click on the second page

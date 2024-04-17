@@ -38,19 +38,19 @@ Then("I can see the title of an item", () => {
   cy.getByE2eId("item-list-title").first().should("not.be.empty");
 });
 
-When("I click on the first item's author name", () => {
-  cy.getByE2eId("item-author")
+When("I click on the first item's seller name", () => {
+  cy.getByE2eId("item-seller")
     .first()
-    .then((authorName) => {
-      cy.wrap(authorName.text()).as("author");
+    .then((sellerName) => {
+      cy.wrap(sellerName.text()).as("seller");
     });
-  cy.getByE2eId("item-author").first().click();
+  cy.getByE2eId("item-seller").first().click();
 });
 
-Then("I navigate to the author's profile page", () => {
-  cy.get("@author").then((authorName) => {
+Then("I navigate to the seller's profile page", () => {
+  cy.get("@seller").then((sellerName) => {
     cy.url().should("include", `/profile/`);
-    cy.getByE2eId("item-author-profile").should("have.text", authorName);
+    cy.getByE2eId("item-seller-profile").should("have.text", sellerName);
   });
 });
 

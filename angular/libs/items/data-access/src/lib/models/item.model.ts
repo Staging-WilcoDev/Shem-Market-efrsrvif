@@ -10,13 +10,13 @@ export const itemInitialState: ItemState = {
     slug: "",
     title: "",
     description: "",
-    body: "",
+    image: "",
     tagList: [],
     createdAt: "",
     updatedAt: "",
     favorited: false,
     favoritesCount: 0,
-    author: {
+    seller: {
       username: "",
       bio: "",
       image: "",

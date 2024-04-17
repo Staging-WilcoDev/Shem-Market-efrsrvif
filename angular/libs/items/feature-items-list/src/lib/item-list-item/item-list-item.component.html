@@ -1,15 +1,16 @@
+
 <div class="item-preview">
   <div class="item-meta">
     <a>
-      <img [src]="item().author.image" />
+      <img [src]="item().seller.image" />
     </a>
     <div class="info">
       <a
-        data-e2e-id="item-author"
-        class="author"
-        [routerLink]="['/profile', item().author.username]"
+        data-e2e-id="item-seller"
+        class="seller"
+        [routerLink]="['/profile', item().seller.username]"
       >
-        {{ item().author.username }}
+        {{ item().seller.username }}
       </a>
       <span class="date">
         {{ item().createdAt | date: "longDate" }}

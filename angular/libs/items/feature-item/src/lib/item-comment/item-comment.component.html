@@ -4,24 +4,24 @@
   </div>
   <div class="card-footer">
     <a
-      class="comment-author"
-      [routerLink]="['/profile', comment().author.username]"
+      class="comment-seller"
+      [routerLink]="['/profile', comment().seller.username]"
     >
-      <img [src]="comment().author.image" class="comment-author-img" />
+      <img [src]="comment().seller.image" class="comment-seller-img" />
     </a>
     &nbsp;
     <a
-      class="comment-author"
-      [routerLink]="['/profile', comment().author.username]"
+      class="comment-seller"
+      [routerLink]="['/profile', comment().seller.username]"
     >
-      {{ comment().author.username }}
+      {{ comment().seller.username }}
     </a>
     <span class="date-posted">
       {{ comment().createdAt | date: "longDate" }}
     </span>
     <span
       class="mod-options"
-      [hidden]="currentUser().username !== comment().author.username"
+      [hidden]="currentUser().username !== comment().seller.username"
     >
       <i
         class="ion-trash-a"

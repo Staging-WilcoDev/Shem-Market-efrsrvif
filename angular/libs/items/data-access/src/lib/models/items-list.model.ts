@@ -13,7 +13,7 @@ export interface ItemsListConfig {
 
 export interface Filters {
   tag?: string;
-  author?: string;
+  seller?: string;
   favorited?: string;
   limit?: number;
   offset?: number;

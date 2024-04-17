@@ -16,7 +16,7 @@ export const profileItemsResolver: ResolveFn<boolean> = (
     ...itemsListInitialState.listConfig,
     filters: {
       ...itemsListInitialState.listConfig.filters,
-      author: username,
+      seller: username,
     },
   };
 

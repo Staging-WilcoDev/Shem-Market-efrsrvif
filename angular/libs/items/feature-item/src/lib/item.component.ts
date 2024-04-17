@@ -2,7 +2,6 @@ import { Field, formsActions, ngrxFormsQuery } from "@realworld/core/forms";
 import {
   ChangeDetectionStrategy,
   Component,
-  Input,
   OnDestroy,
   OnInit,
   computed,
@@ -59,11 +58,11 @@ export class ItemComponent implements OnInit, OnDestroy {
   data$ = this.store.select(ngrxFormsQuery.selectData);
   touchedForm$ = this.store.select(ngrxFormsQuery.selectTouched);
 
-  $authorUsername = this.itemStore.data.author.username;
+  $sellerUsername = this.itemStore.data.seller.username;
   $isAuthenticated = this.authStore.loggedIn;
   $currentUser = this.authStore.user;
   $canModify = computed(
-    () => this.authStore.user.username() === this.$authorUsername(),
+    () => this.authStore.user.username() === this.$sellerUsername(),
   );
 
   ngOnInit() {

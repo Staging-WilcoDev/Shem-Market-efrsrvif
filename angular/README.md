@@ -40,13 +40,13 @@ The example application is a social blogging site (i.e. a Medium.com clone) call
 - Settings page (URL: /#/settings )
 - Editor page to create/edit items (URL: /#/editor, /#/editor/item-slug-here )
 - Item page (URL: /#/item/item-slug-here )
-  - Delete item button (only shown to item's author)
+  - Delete item button (only shown to item's seller)
   - Render markdown from server client side
   - Comments section at bottom of page
-  - Delete comment button (only shown to comment's author)
+  - Delete comment button (only shown to comment's seller)
 - Profile page (URL: /#/profile/:username, /#/profile/:username/favorites )
   - Show basic user info
-  - List of items populated from author's created items or author's favorited items
+  - List of items populated from seller's created items or seller's favorited items
 
 ## Commands
 

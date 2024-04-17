@@ -6,10 +6,9 @@ Feature: New item
 
     Background:
         Given I am logged in to the system  so I can test the new item functionality
-        And I am on New Post page
+        And I am on New Item page
         When I input the title of the item
-        And I input the summary of the item
-        And I input the body of the item
+        And I input the description of the item
         And I input tags of the item
         And I click Publish button
 

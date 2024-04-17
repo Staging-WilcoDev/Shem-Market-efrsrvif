@@ -5,13 +5,13 @@ import {
   input,
 } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { NgClass, DatePipe } from "@angular/common";
+import { NgClass, DatePipe, CommonModule } from "@angular/common";
 import { Item } from "@realworld/core/api-types";
 @Component({
   selector: "cdt-item-list-item",
   standalone: true,
   templateUrl: "./item-list-item.component.html",
-  imports: [RouterModule, NgClass, DatePipe],
+  imports: [RouterModule, NgClass, DatePipe, CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ItemListItemComponent {

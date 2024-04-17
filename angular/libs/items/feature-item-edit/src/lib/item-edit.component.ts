@@ -27,15 +27,15 @@ const structure: Field[] = [
     validator: [Validators.required],
   },
   {
-    type: "INPUT",
+    type: "TEXTAREA",
     name: "description",
-    placeholder: "What's this item about?",
+    placeholder: "Write some description (in markdown)",
     validator: [Validators.required],
   },
   {
-    type: "TEXTAREA",
-    name: "body",
-    placeholder: "Write your item (in markdown)",
+    type: "INPUT",
+    name: "image",
+    placeholder: "Item image",
     validator: [Validators.required],
   },
   {

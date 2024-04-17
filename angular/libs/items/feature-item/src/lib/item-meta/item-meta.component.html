@@ -1,10 +1,10 @@
 <div class="item-meta">
-  <a [routerLink]="['/profile', item().author.username]">
-    <img [src]="item().author.image" />
+  <a [routerLink]="['/profile', item().seller.username]">
+    <img [src]="item().seller.image" />
   </a>
   <div class="info">
-    <a class="author" [routerLink]="['/profile', item().author.username]">
-      {{ item().author.username }}
+    <a class="seller" [routerLink]="['/profile', item().seller.username]">
+      {{ item().seller.username }}
     </a>
     <span class="date">{{ item().createdAt | date: "longDate" }}</span>
   </div>
@@ -26,14 +26,14 @@
     <button
       class="btn btn-sm action-btn"
       [ngClass]="{
-        'btn-outline-secondary': !item().author.following,
-        'btn-secondary': item().author.following
+        'btn-outline-secondary': !item().seller.following,
+        'btn-secondary': item().seller.following
       }"
       (click)="toggleFollow()"
     >
       <i class="ion-plus-round"></i>
-      &nbsp; {{ item().author.following ? "Unfollow" : "Follow" }}
-      {{ item().author.username }}
+      &nbsp; {{ item().seller.following ? "Unfollow" : "Follow" }}
+      {{ item().seller.username }}
     </button>
     &nbsp;&nbsp;
     <button

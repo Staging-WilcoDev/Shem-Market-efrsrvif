@@ -73,7 +73,7 @@ export const ItemStore = signalStore(
         pipe(
           switchMap((username) => actionsService.followUser(username)),
           tap(({ profile }) =>
-            patchState(store, { data: { ...store.data(), author: profile } }),
+            patchState(store, { data: { ...store.data(), seller: profile } }),
           ),
         ),
       ),
@@ -81,7 +81,7 @@ export const ItemStore = signalStore(
         pipe(
           switchMap((username) => actionsService.unfollowUser(username)),
           tap(({ profile }) =>
-            patchState(store, { data: { ...store.data(), author: profile } }),
+            patchState(store, { data: { ...store.data(), seller: profile } }),
           ),
         ),
       ),

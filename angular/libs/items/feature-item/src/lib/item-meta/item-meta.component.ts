@@ -32,10 +32,10 @@ export class ItemMetaComponent {
   }
 
   toggleFollow() {
-    if (this.item().author.following) {
-      this.unfollow.emit(this.item().author.username);
+    if (this.item().seller.following) {
+      this.unfollow.emit(this.item().seller.username);
     } else {
-      this.follow.emit(this.item().author.username);
+      this.follow.emit(this.item().seller.username);
     }
   }
 

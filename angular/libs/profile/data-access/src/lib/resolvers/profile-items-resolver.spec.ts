@@ -35,7 +35,7 @@ describe("profileItemsResolver", () => {
           ...itemListInitialState.listConfig,
           filters: {
             ...itemListInitialState.listConfig.filters,
-            author: "stef",
+            seller: "stef",
           },
         },
       }),
