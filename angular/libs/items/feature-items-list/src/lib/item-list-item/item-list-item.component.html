@@ -1,5 +1,5 @@
-<div class="item-preview card">
-  <img class="card-img-top" [src]="item().image" />
+<div class="item-preview card p-4">
+  <img class="card-img-top object-fit-cover rounded" [src]="item().image" height="200"/>
   <div class="card-body">
     <a (click)="navigateToItem.emit(item().slug)" class="preview-link p-2">
       <h1 class="card-title" data-e2e-id="item-list-title">
