@@ -1,5 +1,9 @@
 <div class="item-preview card p-4">
-  <img class="card-img-top object-fit-cover rounded" [src]="item().image" height="200"/>
+  <img
+    class="card-img-top object-fit-cover rounded"
+    [src]="item().image"
+    height="200"
+  />
   <div class="card-body">
     <a (click)="navigateToItem.emit(item().slug)" class="preview-link p-2">
       <h1 class="card-title" data-e2e-id="item-list-title">
@@ -8,7 +12,7 @@
       <p class="card-text">{{ item().description }}</p>
     </a>
     <div class="d-flex item-meta">
-      <div class=" flex-grow-1">
+      <div class="flex-grow-1">
         <a
           class="info"
           data-e2e-id="item-seller"
@@ -24,17 +28,17 @@
         </a>
       </div>
 
-        <button
-          [ngClass]="{
-            'btn-outline-primary': item().favorited,
-            'btn-primary': item().favorited
-          }"
-          class="btn btn-sm btn-outline-secondary"
-          (click)="toggleFavorite(item())"
-        >
-          <i class="ion-heart"></i>
-          {{ item().favoritesCount }}
-        </button>
+      <button
+        [ngClass]="{
+          'btn-outline-primary': item().favorited,
+          'btn-primary': item().favorited
+        }"
+        class="btn btn-sm btn-outline-secondary"
+        (click)="toggleFavorite(item())"
+      >
+        <i class="ion-heart"></i>
+        {{ item().favoritesCount }}
+      </button>
     </div>
   </div>
 </div>
