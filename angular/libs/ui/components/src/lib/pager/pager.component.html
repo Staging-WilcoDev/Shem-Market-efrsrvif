@@ -1,15 +1,14 @@
-
 <nav aria-label="Page navigation">
   <ul class="pagination justify-content-center">
-  @for (pageNumber of totalPages(); track pageNumber) {
-    <li
-      data-e2e-id="pagination-item"
-      class="page-item"
-      [ngClass]="{ active: pageNumber === currentPage() }"
-      (click)="setPage.emit(pageNumber)"
-    >
-      <a data-e2e-id="pagination-link" class="page-link">{{ pageNumber }}</a>
-    </li>
-  }
-</ul>
+    @for (pageNumber of totalPages(); track pageNumber) {
+      <li
+        data-e2e-id="pagination-item"
+        class="page-item"
+        [ngClass]="{ active: pageNumber === currentPage() }"
+        (click)="setPage.emit(pageNumber)"
+      >
+        <a data-e2e-id="pagination-link" class="page-link">{{ pageNumber }}</a>
+      </li>
+    }
+  </ul>
 </nav>
