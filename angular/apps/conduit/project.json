@@ -19,7 +19,6 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/conduit/tsconfig.app.json",
         "assets": [
-          "apps/conduit/src/favicon.ico",
           "apps/conduit/src/assets",
           "apps/conduit/src/netlify.toml"
         ],
