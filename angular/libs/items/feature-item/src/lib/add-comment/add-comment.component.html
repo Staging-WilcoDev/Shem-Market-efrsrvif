@@ -1,19 +1,18 @@
 <cdt-list-errors> </cdt-list-errors>
 
-<div class="card comment-form">
+<div class="card text-bg-light p-2">
   <cdt-dynamic-form
-    class="card-block"
+    class="card-body"
     (updateForm)="updateForm.emit($event)"
     [data$]="data$"
     [structure$]="structure$"
     [touchedForm$]="touchedForm$"
   >
   </cdt-dynamic-form>
-  <div class="card-footer">
-    <img [src]="currentUser().image" class="comment-seller-img" />
+  <div class="text-end">
     <button
       (click)="submitComment.emit(item().slug)"
-      class="btn btn-sm btn-primary"
+      class="btn btn-primary"
       type="submit"
     >
       Post Comment

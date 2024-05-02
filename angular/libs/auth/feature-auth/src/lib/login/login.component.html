@@ -2,9 +2,9 @@
   <div class="container page">
     <div class="row">
       <div class="col-md-6 offset-md-3 col-xs-12 d-flex flex-column">
-        <h1 class="text-center">Sign in</h1>
+        <h1 class="text-center text-light">Sign in</h1>
         <p class="text-center">
-          <a [routerLink]="['/register']">Need an account?</a>
+          <a [routerLink]="['/register']" class="link-secondary">Need an account?</a>
         </p>
 
         <cdt-list-errors></cdt-list-errors>
@@ -18,7 +18,7 @@
         <button
           data-e2e-id="sign-in"
           (click)="submit()"
-          class="btn btn-lg btn-primary align-self-end"
+          class="btn btn-lg btn-secondary align-self-end"
           type="submit"
         >
           Sign in

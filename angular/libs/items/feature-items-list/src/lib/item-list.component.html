@@ -13,7 +13,7 @@
           </cdt-item-list-item>
         </div>
       } @empty {
-        <div>No items are here... yet.</div>
+        <div class="text-light">No items are here... yet.</div>
       }
     </div>
   </div>
@@ -24,5 +24,5 @@
     [totalPages]="$totalPages()"
   ></cdt-pager>
 } @else {
-  <div>Loading items...</div>
+  <div class="text-light">Loading items...</div>
 }

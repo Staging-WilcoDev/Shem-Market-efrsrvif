@@ -1,10 +1,10 @@
 <div class="auth-page">
   <div class="container page">
     <div class="row">
-      <div class="col-md-6 offset-md-3 col-xs-12 d-flex flex-column">
+      <div class="col-md-6 offset-md-3 col-xs-12 d-flex flex-column text-light">
         <h1 class="text-center">Sign up</h1>
         <p class="text-center">
-          <a [routerLink]="['/login']">Have an account?</a>
+          <a [routerLink]="['/login']"  class="link-secondary">Have an account?</a>
         </p>
 
         <cdt-list-errors></cdt-list-errors>
@@ -18,7 +18,7 @@
         <button
           data-e2e-id="sign-up"
           (click)="submit()"
-          class="btn btn-primary btn-lg align-self-end"
+          class="btn btn-secondary btn-lg align-self-end"
           type="submit"
         >
           Sign up

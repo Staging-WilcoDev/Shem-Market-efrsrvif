@@ -1,8 +1,8 @@
-<div class="item-meta">
-  <a [routerLink]="['/profile', item().seller.username]">
-    <img [src]="item().seller.image" />
+<div id="item-meta" class="d-flex flex-row align-items-center pt-2">
+  <a [routerLink]="['/profile', item().seller.username]" class="me-2">
+    <img [src]="item().seller.image" height="40px" width="40px" />
   </a>
-  <div class="info">
+  <div class="flex-grow-1 d-flex flex-column py-2">
     <a class="seller" [routerLink]="['/profile', item().seller.username]">
       {{ item().seller.username }}
     </a>
@@ -11,7 +11,7 @@
 
   <span [hidden]="!canModify()">
     <a
-      class="btn btn-sm btn-outline-secondary"
+      class="btn btn-sm btn-outline-secondary me-2"
       [routerLink]="['/editor', item().slug]"
     >
       <i class="ion-edit"></i> Edit Item
@@ -34,19 +34,6 @@
       <i class="ion-plus-round"></i>
       &nbsp; {{ item().seller.following ? "Unfollow" : "Follow" }}
       {{ item().seller.username }}
-    </button>
-    &nbsp;&nbsp;
-    <button
-      class="btn btn-sm btn-outline-primary"
-      [ngClass]="{
-        'btn-outline-primary': !item().favorited,
-        'btn-primary': item().favorited
-      }"
-      (click)="toggleFavorite()"
-    >
-      <i class="ion-heart"></i>
-      &nbsp; {{ item().favorited ? "Unfavorite" : "Favorite" }} Post
-      <span class="counter">({{ item().favoritesCount }})</span>
     </button>
   </span>
 </div>

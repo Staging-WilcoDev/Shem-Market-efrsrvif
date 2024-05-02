@@ -1,5 +1,5 @@
-<div class="card">
-  <div class="card-block">
+<div class="card my-1">
+  <div class="card-body">
     <p class="card-text">{{ comment().body }}</p>
   </div>
   <div class="card-footer">
@@ -7,7 +7,7 @@
       class="comment-seller"
       [routerLink]="['/profile', comment().seller.username]"
     >
-      <img [src]="comment().seller.image" class="comment-seller-img" />
+      <img [src]="comment().seller.image" class="comment-seller-img"  height="40px" width="40px" />
     </a>
     &nbsp;
     <a
