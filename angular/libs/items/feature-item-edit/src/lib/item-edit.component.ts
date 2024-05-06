@@ -8,7 +8,6 @@ import {
 import {
   ChangeDetectionStrategy,
   Component,
-  DestroyRef,
   effect,
   inject,
   OnInit,
@@ -66,7 +65,12 @@ export class ItemEditComponent implements OnInit, OnDestroy {
     if (itemLoaded) {
       untracked(() =>
         this.store.dispatch(
-          formsActions.setData({ data: this.itemStore.data() }),
+          formsActions.setData({
+            data: {
+              ...this.itemStore.data(),
+              tagList: this.itemStore.data().tagList.join(","),
+            },
+          }),
         ),
       );
     }

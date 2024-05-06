@@ -135,15 +135,17 @@ export const ItemStore = signalStore(
         pipe(
           concatLatestFrom(() => reduxStore.select(ngrxFormsQuery.selectData)),
           switchMap(([_, data]) =>
-            itemsService.publishItem(data).pipe(
-              tapResponse({
-                next: ({ item }) => router.navigate(["item", item.slug]),
-                error: ({ error }) =>
-                  reduxStore.dispatch(
-                    formsActions.setErrors({ errors: error.errors }),
-                  ),
-              }),
-            ),
+            itemsService
+              .publishItem({ ...data, tagList: data.tagList?.split(",") })
+              .pipe(
+                tapResponse({
+                  next: ({ item }) => router.navigate(["item", item.slug]),
+                  error: ({ error }) =>
+                    reduxStore.dispatch(
+                      formsActions.setErrors({ errors: error.errors }),
+                    ),
+                }),
+              ),
           ),
         ),
       ),
