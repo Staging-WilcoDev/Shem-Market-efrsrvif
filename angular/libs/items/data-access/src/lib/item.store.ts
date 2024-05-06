@@ -118,10 +118,11 @@ export const ItemStore = signalStore(
           switchMap(([slug, data]) =>
             itemsService.addComment(slug, data.comment).pipe(
               tapResponse({
-                next: () =>
-                  patchState(store, {
-                    comments: [data.comment, ...store.comments()],
-                  }),
+                next: (res) => {
+                  return patchState(store, {
+                    comments: [res.comment, ...store.comments()],
+                  });
+                },
                 error: ({ error }) =>
                   reduxStore.dispatch(
                     formsActions.setErrors({ errors: error.errors }),
